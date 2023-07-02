@@ -26,24 +26,17 @@
   <v-app-bar flat class="d-flex justify-center" height="100">
     <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
     <v-spacer></v-spacer>
-    <v-avatar
-      class="ml-6"
-      size="80"
-      image="/images/Ghost-Golf-Logo.webp"
-    ></v-avatar>
+    <NuxtLink to="/">
+      <v-avatar
+        class="ml-6"
+        size="80"
+        image="/images/Ghost-Golf-Logo.webp"
+      ></v-avatar
+    ></NuxtLink>
 
     <v-spacer></v-spacer>
     <v-btn icon>
-      <v-icon>mdi-account-outline </v-icon>
-    </v-btn>
-    <v-btn icon>
       <v-icon>mdi-magnify</v-icon>
-    </v-btn>
-    <v-btn icon>
-      <v-icon>mdi-shopping-outline</v-icon>
-    </v-btn>
-    <v-btn icon>
-      <v-icon>mdi-dots-vertical</v-icon>
     </v-btn>
   </v-app-bar>
 </template>

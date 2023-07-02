@@ -12,7 +12,6 @@
         v-for="product in products"
         :key="product.id"
       >
-        <!-- @click="handleCardClick(product)" -->
         <v-card elevation="5">
           <v-img :src="product.image" cover>
             <!-- You can add additional content or overlay on the image if needed -->
@@ -24,6 +23,7 @@
           <v-divider></v-divider>
           <v-card-actions>
             <v-btn
+              class="text-capitalize text-body-1"
               color="grey-darken-4 ma-2"
               variant="text"
               :to="`/${product.id}`"
