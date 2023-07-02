@@ -58,9 +58,9 @@
 
             <div v-if="response">
               <h2>Summarize</h2>
-              <p class="pt-2 text-body-2 text-capitalize">
+              <!-- <p class="pt-2 text-body-2 text-capitalize">
                 {{ response.value.query }}
-              </p>
+              </p> -->
               <p class="pt-5 text-body-1">
                 {{ response.value.summarize_output }}
               </p>
@@ -73,15 +73,15 @@
                   <v-list-item-content>
                     <v-list-item-title
                       class="font-weight-bold pt-5 text-capitalize"
-                      >{{ comment.payload.title }}</v-list-item-title
+                      >{{ comment.title }}</v-list-item-title
                     >
 
                     <v-list-item-subtitle class="pt-2">{{
-                      comment.payload.createdAt
+                      comment.date
                     }}</v-list-item-subtitle>
                     <v-list-item-subtitle class="pt-2">
                       <v-rating
-                        :model-value="comment.payload.score"
+                        :model-value="comment.score"
                         color="success"
                         density="compact"
                         half-increments
@@ -93,10 +93,10 @@
                       >{{ comment.score.toFixed(2) }}
                       <v-icon icon="mdi-emoticon-outline ml-3"></v-icon>
 
-                      {{ comment.payload.sentiment.toFixed(2) }}
+                      {{ comment.sentiment.toFixed(2) }}
                     </v-list-item-subtitle>
                     <v-list-item-subtitle class="pt-4 text-body-1">{{
-                      comment.payload.content
+                      comment.content
                     }}</v-list-item-subtitle>
 
                     <v-divider class="mt-7"></v-divider>
